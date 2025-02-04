@@ -16,6 +16,6 @@ public interface ILocador {
     public LocalModel getLocadorDAO(int pIdLocador);
     public LocalModel getLocadorDAO(String pLocadorModel);
     public ArrayList<LocalModel> getListaLocadorDAO();
-    public boolean atualziarLocadorDAO(LocalModel pLocadorModel);
+    public boolean atualizarLocadorDAO(LocalModel pLocadorModel);
     public boolean excluirLocadorModelDAO(int idLocadorModel);
 }

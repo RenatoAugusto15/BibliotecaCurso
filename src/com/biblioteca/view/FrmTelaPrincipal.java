@@ -16,7 +16,7 @@ import javax.swing.*;
  *
  * @author Aluno
  */
-public class FrmTelaPrincipal extends javax.swing.JFrame {
+public class FrmTelaPrincipal extends JFrame {
 
     /**
      * Creates new form FrmTelaPrincipal
@@ -509,25 +509,27 @@ public class FrmTelaPrincipal extends javax.swing.JFrame {
     }
     
     private void setarAcesso(){
+        SessaoUsuarioModel sessaoUsuarioModel = new SessaoUsuarioModel();
+
         switch (SessaoUsuarioModel.nivelAcesso) {
-            case "ADMINISTRADOR": 
-                
-                jmiConsultaLocador.setEnabled(true);
-                jmiConsultaLocatario.setEnabled(true);
-                jmiEmprestimo.setEnabled(true);
-                jmiNovoLivro.setEnabled(true);
-                jmiNovoLocador.setEnabled(true);
-                jmiNovoLocatario.setEnabled(true);
+            case "ADMINISTRADOR":
+
+                sessaoUsuarioModel.getJmiConsultaLocador().setEnabled(true);
+                sessaoUsuarioModel.getJmiConsultaLocatario().setEnabled(true);
+                sessaoUsuarioModel.getJmiEmprestimo().setEnabled(true);
+                sessaoUsuarioModel.getJmiNovoLivro().setEnabled(true);
+                sessaoUsuarioModel.getJmiNovoLocador().setEnabled(true);
+                sessaoUsuarioModel.getJmiNovoLocatario().setEnabled(true);
                 
                 break;
                 
             default:
-                jmiConsultaLocador.setEnabled(false);
-                jmiConsultaLocatario.setEnabled(false);
-                jmiEmprestimo.setEnabled(false);
-                jmiNovoLivro.setEnabled(false);
-                jmiNovoLocador.setEnabled(false);
-                jmiNovoLocatario.setEnabled(false);
+                sessaoUsuarioModel.getJmiConsultaLocador().setEnabled(false);
+                sessaoUsuarioModel.getJmiConsultaLocatario().setEnabled(false);
+                sessaoUsuarioModel.getJmiEmprestimo().setEnabled(false);
+                sessaoUsuarioModel.getJmiNovoLivro().setEnabled(false);
+                sessaoUsuarioModel.getJmiNovoLocador().setEnabled(false);
+                sessaoUsuarioModel.getJmiNovoLocatario().setEnabled(false);
                 
                 break;
                 

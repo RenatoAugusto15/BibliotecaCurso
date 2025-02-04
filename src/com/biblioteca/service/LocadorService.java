@@ -6,6 +6,8 @@ package com.biblioteca.service;
 
 import com.biblioteca.model.LocadorModel;
 import com.biblioteca.model.dao.LocadorDao;
+import com.bibliotecaRenato.model.LocalModel;
+
 import java.util.ArrayList;
 
 /**
@@ -26,7 +28,7 @@ public class LocadorService {
      * @param pLocadorModel
      * @return
      */
-    public boolean salvarLocadorDAO(LocadorModel pLocadorModel) {
+    public boolean salvarLocadorDAO(LocalModel pLocadorModel) {
         return locadorDao.salvarLocadorDAO(pLocadorModel);
     }
 
@@ -36,7 +38,7 @@ public class LocadorService {
      * @param pIdLocador
      * @return
      */
-    public LocadorModel getLocadorDAO(int pIdLocador) {
+    public LocalModel getLocadorDAO(int pIdLocador) {
         return locadorDao.getLocadorDAO(pIdLocador);
     }
 
@@ -46,7 +48,7 @@ public class LocadorService {
      * @param pLocadorModel
      * @return
      */
-    public LocadorModel getLocadorDAO(String pLocadorModel) {
+    public LocalModel getLocadorDAO(String pLocadorModel) {
         return locadorDao.getLocadorDAO(pLocadorModel);
     }
 
@@ -55,7 +57,7 @@ public class LocadorService {
      *
      * @return
      */
-    public ArrayList<LocadorModel> getListaLocadorDAO() {
+    public ArrayList<LocalModel> getListaLocadorDAO() {
         return locadorDao.getListaLocadorDAO();
     }
 
@@ -65,7 +67,7 @@ public class LocadorService {
      * @param pLocadorModel
      * @return
      */
-    public boolean atualizarLocadorDAO(LocadorModel pLocadorModel) {
+    public boolean atualizarLocadorDAO(LocalModel pLocadorModel) {
         return locadorDao.atualizarLocadorDAO(pLocadorModel);
     }
 
@@ -76,7 +78,7 @@ public class LocadorService {
      * @return
      */
     public boolean excluirLocadorDAO(int idLocadorModel) {
-        return locadorDao.excluirLocadorDAO(idLocadorModel);
+        return locadorDao.excluirLocadorModelDAO(idLocadorModel);
     }
 }
 

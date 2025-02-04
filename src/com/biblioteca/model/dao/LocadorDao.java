@@ -136,7 +136,7 @@ public class LocadorDao extends ConnectionMySQL implements ILocador {
     }
 
     @Override
-    public boolean atualziarLocadorDAO(LocalModel pLocadorModel) {
+    public boolean atualizarLocadorDAO(LocalModel pLocadorModel) {
        try {
             this.conectar();
             return this.executarInsertUpdateSQL("UPDATE tbl_locador SET "
